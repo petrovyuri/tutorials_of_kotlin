@@ -21,13 +21,12 @@ fun main() {
     }
 
 
-    if (playerRice == "Humans") {
-        println("Раса игрока Люди")
-    } else if (playerRice == "Ork") {
-        println("Раса игрока Орки")
-    } else if (playerRice == "Demons") {
-        println("Раса игрока Демоны")
+    when (playerRice) {
+        "Humans" -> println("Раса игрока Люди")
+        "Ork" -> println("Раса игрока Орки")
+        "Demons" -> println("Раса игрока Демоны")
     }
+
 
     println("Мир $world")
     println("Игрок $playerName готов")
