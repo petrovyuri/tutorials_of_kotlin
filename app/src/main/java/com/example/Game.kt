@@ -12,12 +12,12 @@ fun main() {
 
     playerLives = checkSavedGame(isSavedGame, playerLives)
 
-    printRacePlayer(playerRice)
+    printRacePlayerLamd(playerRice)
 
     printPlayer(world, playerName, playerAge, playerLives, playerMoney)
 }
 
- fun checkSavedGame(isSavedGame: Boolean, playerLives: Int): Int {
+fun checkSavedGame(isSavedGame: Boolean, playerLives: Int): Int {
     var playerLives1 = playerLives
     if (isSavedGame) {
         println("LoadGame...")
@@ -29,7 +29,7 @@ fun main() {
     return playerLives1
 }
 
-private fun printRacePlayer(playerRice: String) {
+val printRacePlayerLamd = { playerRice: String ->
     when (playerRice) {
         "Humans" -> println("Раса игрока Люди")
         "Ork" -> println("Раса игрока Орки")
